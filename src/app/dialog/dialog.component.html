@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>Realizar Cadastro</h1>
+<div mat-dialog-content [formGroup]="form">
+  <p>Preencha as informações</p>
+  <mat-form-field appearance="outline">
+    <mat-label>Nome do anúncio</mat-label>
+    <input matInput formControlName="nomeAnuncio">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Cliente</mat-label>
+    <input matInput formControlName="cliente">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Data de início</mat-label>
+    <input matInput formControlName="dataInicio" type="number">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Data de término</mat-label>
+    <input matInput formControlName="dataTermino" type="number">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Investimento por dia</mat-label>
+    <input matInput type="number" formControlName="investimentoPorDia">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button cdkFocusInitial [mat-dialog-close]="false">Cancelar</button>
+  <button mat-button [disabled]="form.invalid" (click)="salvar()">Salvar</button>
+</div>

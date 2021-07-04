@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>Relatorio do cliente {{anuncio.cliente}}</h1>
+<div mat-dialog-content>
+  <div>
+    <h3>Valor total investido</h3>
+    <p>R$ {{valorTotalInvestido}}</p>
+  </div>
+  <div>
+    <h3>Quantidade máxima de visualizações</h3>
+    <p>{{quantidadeMaximaDeVisualizacoes}}</p>
+  </div>
+  <div>
+    <h3>Quantidade máxima de cliques</h3>
+    <p>{{quantidadeMaximaDeCliques}}</p>
+  </div>
+  <div>
+    <h3>Quantidade máxima de compartilhamentos</h3>
+    <p>{{quantidadeMaximaDecompartilhamentos}}</p>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="fechar()">Fechar</button>
+</div>
